@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require("./utils/generateMarkdown")
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -24,13 +25,13 @@ const questions = [
         name: 'usage',
       },
       {
-        type: 'confirm',
-        message: 'Would you like to add a screenshot',
+        type: 'input',
+        message: 'What is the filepath to your screenshot',
         name: 'screenshot',
       },
       {
         type: 'input',
-        message: '',
+        message: 'List any credits for the project.',
         name: 'credits',
       },
       {
@@ -38,7 +39,7 @@ const questions = [
         message: 'What license have you used',
         choices: [
           "MIT",
-          "Apache 2.0",
+          "Apache-2.0",
           "BSD",
           "GNU GPL",
           "MPL-2.0",
@@ -73,9 +74,11 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then((data) => {
+   .then((data) => {
+    let mkdData = generateMarkdown(data)
+    console.log(mkdData)
     const filename = `README.md`;
-    writeToFile(filename, JSON.stringify(data, null, '\t'))
+    writeToFile(filename, mkdData)
     
    } );
 }
