@@ -40,10 +40,11 @@ const questions = [
         choices: [
           "MIT",
           "Apache-2.0",
-          "BSD",
+          "FreeBSD",
           "GNU GPL",
           "MPL-2.0",
-          "EPL-2.0"
+          "EPL-2.0",
+          ""
         ],
         name: 'license',
       },

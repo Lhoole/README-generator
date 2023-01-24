@@ -1,7 +1,7 @@
- # asfgas ![Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+ # afdbadbf ![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
   
   ## Description
-  sagsg 
+  adfb 
  
   ## Table of Contents 
   
@@ -14,25 +14,25 @@
   
   ## Installation
   
-  safgasfg
+  afdb
   
   ## Usage
   
-  asgfsaf
+  afb
   
-  !(afgas)
+  
 
   ## Credits
   
-  gsadgsa
+  afb
   
   ## License
   
-  ![License: [object Object]] !(https://img.shields.io/badge/License-Apache%202.0-blue.svg) , (https://opensource.org/licenses/Apache-2.0)
+  afdbadbf is available under the MIT license. See the LICENSE file or https://opensource.org/licenses/MIT for more info.
   
   ## Contact
   
-  Github: [asgasdg](https://github.com/asgasdg) , Email: asdgsdg
+  Github: [afdb](https://github.com/afdb) , Email: afdb
   
   ## Tests
-  asdgsa
+  a

@@ -43,9 +43,10 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  let badge = renderLicenseBadge(license)
   let link = renderLicenseLink(license)
-  return `![License: ${license}] !(${badge}) , (${link})`
+  let input = license.license;
+  if (input !== "")
+  return `${license.title} is available under the ${input} license. See the LICENSE file or ${link} for more info.`
 }
 
 function renderTableOfContents(data){
@@ -68,11 +69,20 @@ function renderTableOfContents(data){
   ${table}
   `;
 }
+
+function renderScreenshot(data){
+  let image = ''
+  if (data.screenshot&& data.screenshot.length){
+    image += `![Screenshot](${data.screenshot})` 
+    return image
+  } else return ""
+}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   let contents = renderTableOfContents(data)
   let licenseSpot = renderLicenseSection(data)
   let licenseBadge = renderLicenseBadge(data)
+  let image = renderScreenshot(data)
   let str = 
   ` # ${data.title} ![${data.license}](${licenseBadge})
   
@@ -89,7 +99,7 @@ function generateMarkdown(data) {
   
   ${data.usage}
   
-  !(${data.screenshot})
+  ${image}
 
   ## Credits
   
