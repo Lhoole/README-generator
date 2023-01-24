@@ -78,9 +78,8 @@ function init() {
    .then((data) => {
     let mkdData = generateMarkdown(data)
     console.log(mkdData)
-    const filename = `README.md`;
-    writeToFile(filename, mkdData)
-    
+    const filename = `Sample README.md`;
+    writeToFile(filename, mkdData)  
    } );
 }
 
